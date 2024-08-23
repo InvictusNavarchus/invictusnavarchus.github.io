@@ -75,9 +75,19 @@ nav ul li a {
     transform: translateY(-5px);
 }
 
+.card span {
+    display: flex;
+    gap: 4px;
+    align-items: center;
+}
+
 .card h3 {
-    margin-top: 0;
+    margin: 0;
     color: #007bff;
+}
+
+.card img, svg {
+    width: 27px
 }
 
 /* Section styles */
