@@ -94,8 +94,18 @@ nav ul li a {
     color: #007bff;
 }
 
-.card img, svg {
+.card span img, svg {
     width: 27px
+}
+
+#projects {
+    .card {
+        display: flex;
+        flex-direction: column;
+    }
+    img {
+        width: 100%;
+    }
 }
 
 /* Section styles */
