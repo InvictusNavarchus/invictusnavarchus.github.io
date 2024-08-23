@@ -60,6 +60,7 @@ nav ul li a {
 
 /* Card styles */
 .card {
+    flex: 1 0 25%;
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -101,7 +102,7 @@ footer {
 /* Responsive design */
 @media (max-width: 768px) {
     .card {
-        width: 100%;
+        width: 50%;
     }
 
     header {
