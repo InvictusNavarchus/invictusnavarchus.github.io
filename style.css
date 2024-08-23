@@ -142,3 +142,9 @@ footer {
         width: 100%;
     }
 }
+
+@media (max-width: 600px) {
+    #projects .card {
+        flex: 1 0 38%;
+    }
+}
