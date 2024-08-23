@@ -39,10 +39,18 @@ nav ul li a {
 
 /* Hero section */
 .hero {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     text-align: center;
     padding: 50px 0;
     background-color: #e6f3ff;
     border-radius: 5px;
+}
+
+.hero img {
+    border-radius: 50%;
+    width: 200px;
 }
 
 .hero h1 {
