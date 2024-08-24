@@ -1,3 +1,8 @@
+/* Style Reset */
+a {
+    text-decoration: none;
+}
+
 /* General styles */
 body {
     font-family: Arial, sans-serif;
