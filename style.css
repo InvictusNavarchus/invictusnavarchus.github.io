@@ -5,6 +5,7 @@ a {
 
 /* General styles */
 body {
+    background-color: #f0f0f0;
     font-family: "Open Sans", sans-serif;
     line-height: 1.6;
     color: #333;
@@ -165,7 +166,7 @@ section {
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     margin-top: 40px;
 }
 
