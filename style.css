@@ -76,17 +76,30 @@ nav ul li a {
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
+}
+
+/* Card containers */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1200px; /* Adjust this value as needed */
+    margin: 0 auto;
 }
 
 /* Card styles */
 .card {
-    flex: 1 0 25%;
+    flex: 1 1 calc(20% - 20px);
+    min-width: calc(20% - 20px);
+    max-width: calc(20% - 20px);
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 20px;
     margin-bottom: 20px;
-    width: calc(20% - 20px);
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
 
@@ -94,6 +107,10 @@ nav ul li a {
         display: flex;
         gap: 4px;
         align-items: center;
+
+        img {
+            width: 27px;
+        }
     }
 
     h3 {
@@ -106,26 +123,19 @@ nav ul li a {
     }
 }
 
-
-.card span img {
-    width: 27px
-}
-
-#projects {
-    img {
-        width: 100%;
-    }
+#projects img {
+    width: 100%;
 }
 
 /* Section styles */
 section {
     margin-bottom: 40px;
-}
 
-section h2 {
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    h2 {
+        border-bottom: 2px solid #007bff;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
 }
 
 /* Footer */
@@ -137,23 +147,41 @@ footer {
 }
 
 /* Responsive design */
+@media (max-width: 1200px) {
+    .card {
+        flex: 1 1 calc(25% - 20px);
+        min-width: calc(25% - 20px);
+        max-width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 992px) {
+    .card {
+        flex: 1 1 calc(33.333% - 20px);
+        min-width: calc(33.333% - 20px);
+        max-width: calc(33.333% - 20px);
+    }
+}
+
 @media (max-width: 768px) {
     .card {
-        width: 50%;
+        flex: 1 1 calc(50% - 20px);
+        min-width: calc(50% - 20px);
+        max-width: calc(50% - 20px);
     }
-
     header {
         flex-direction: column;
     }
-
     aside {
         margin-top: 20px;
         width: 100%;
     }
 }
 
-@media (max-width: 600px) {
-    #projects .card {
-        flex: 1 0 38%;
+@media (max-width: 480px) {
+    .card {
+        flex: 1 1 100%;
+        min-width: 100%;
+        max-width: 100%;
     }
 }
