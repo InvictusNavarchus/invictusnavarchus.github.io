@@ -81,6 +81,7 @@ nav ul li a {
 
 .card:hover {
     transform: translateY(-5px);
+    cursor: grab;
 }
 
 .card span {
