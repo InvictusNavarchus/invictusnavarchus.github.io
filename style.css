@@ -92,9 +92,9 @@ nav ul li a {
 
 /* Card styles */
 .card {
-    flex: 1 1 calc(20% - 20px);
-    min-width: calc(20% - 20px);
-    max-width: calc(20% - 20px);
+    flex: 1 0 calc(20% - 20px);
+    min-width: calc(30% - 20px);
+    max-width: calc(30% - 20px);
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
