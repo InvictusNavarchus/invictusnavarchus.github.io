@@ -108,15 +108,11 @@ nav ul li a {
 }
 
 
-.card span img, svg {
+.card span img {
     width: 27px
 }
 
 #projects {
-    .card {
-        display: flex;
-        flex-direction: column;
-    }
     img {
         width: 100%;
     }
