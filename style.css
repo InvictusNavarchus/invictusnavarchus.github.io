@@ -63,6 +63,12 @@ nav ul li a {
     margin-bottom: 10px;
 }
 
+.hero .headline {
+    font-size: 20px;
+    color: #007bff;
+    font-weight: 700;
+}
+
 /* Card containers */
 .card-container {
     display: flex;
