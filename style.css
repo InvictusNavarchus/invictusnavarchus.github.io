@@ -94,8 +94,8 @@ nav ul li a {
 /* Card styles */
 .card {
     flex: 1 0 calc(20% - 20px);
-    min-width: calc(30% - 20px);
-    max-width: calc(30% - 20px);
+    min-width: calc(25% - 20px);
+    max-width: calc(25% - 20px);
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -150,14 +150,6 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 1200px) {
-    .card {
-        flex: 1 1 calc(25% - 20px);
-        min-width: calc(25% - 20px);
-        max-width: calc(25% - 20px);
-    }
-}
-
 @media (max-width: 992px) {
     .card {
         flex: 1 1 calc(33.333% - 20px);
