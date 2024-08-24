@@ -11,6 +11,7 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    text-align: center;
 }
 
 /* Header and navigation */
@@ -107,6 +108,7 @@ nav ul li a {
         display: flex;
         gap: 4px;
         align-items: center;
+        justify-content: center;
 
         img {
             width: 27px;
