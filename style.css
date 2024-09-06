@@ -164,6 +164,14 @@ nav ul li a {
     }
 }
 
+#connect {
+    img {
+        object-fit: fill;
+        width: 60%;
+        height: 130px;
+    }
+}
+
 /* Section styles */
 section {
     margin-bottom: 40px;
