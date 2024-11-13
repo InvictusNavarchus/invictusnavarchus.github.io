@@ -150,8 +150,10 @@ nav ul li a {
         padding: 0;
     }
     .card-image {
-        background-color: var(--background-card-projects);
         margin-bottom: 10px;
+    }
+    .card-imdb {
+        background-color: #fec007;
     }
     img {
         object-fit: cover;
