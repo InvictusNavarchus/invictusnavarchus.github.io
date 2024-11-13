@@ -116,7 +116,6 @@ nav ul li a {
 
     h3 {
         margin: 0;
-        color: var(--color-primary);
     }
 
     &:hover {
