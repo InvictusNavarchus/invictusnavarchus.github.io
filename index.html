@@ -19,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -31,6 +32,11 @@
                 <li><a href="https://blog.navarchus.id" target="_blank">Blog</a></li>
             </ul>
         </nav>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </header>
 
     <main>
@@ -165,6 +171,7 @@
                 </div>
             </div>
         </section>
+        <a href="#top" class="back-to-top">Back to Top</a>
     </main>
 
     <footer>
@@ -188,6 +195,33 @@ https://navarchus.id -->
     alt="Web Analytics"
     referrerPolicy="no-referrer-when-downgrade"></a></div>
     </noscript>
+    <!-- Add JavaScript before the closing body tag -->
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        // Toggle menu when hamburger is clicked
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            }
+        });
+
+        // Close menu when clicking on a link
+        nav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
 <!-- End of Statcounter Code -->
 </body>
 </html>

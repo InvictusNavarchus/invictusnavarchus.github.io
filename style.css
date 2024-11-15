@@ -1,13 +1,13 @@
 /* Define color variables */
 :root {
-    --background-light: #f0f0f0;
-    --background-header: #f8f9fa;
-    --background-hero: #e6f3ff;
+    --background-light: #ffffff;
+    --background-header: #004c99;  /* Darker shade of primary color */
+    --background-hero: #f0f0f0;
     --background-card: #fff;
     --background-card-alt: #faf9f6;
     --background-card-projects: #f9f8f6;
-    --color-text: #333;
-    --color-primary: #007bff;
+    --color-text: #4d4d4d;
+    --color-primary: #0066cc;
     --color-border: #ddd;
     --color-shadow: rgba(0, 0, 0, 0.1);
 }
@@ -20,13 +20,14 @@ a {
 /* General styles */
 body {
     background-color: var(--background-light);
-    font-family: "Open Sans", sans-serif;
+    font-family: "Roboto", sans-serif;
     line-height: 1.6;
     color: var(--color-text);
     max-width: 900px;
     margin: 0 auto;
     padding: 0 20px;
     text-align: center;
+    margin-top: 80px; /* Adjust for fixed header */
 }
 
 /* Header and navigation */
@@ -36,6 +37,11 @@ header {
     justify-content: space-between;
     align-items: flex-start;
     padding: 20px 0;
+    position: static; /* Remove fixed positioning */
+    top: 0;
+    width: 100%;
+    background-color: var(--background-header);
+    z-index: 1000;
 }
 
 nav {
@@ -54,8 +60,13 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: var(--color-text);
+    color: #ffffff;
     font-weight: bold;
+    padding: 10px 15px;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
 }
 
 /* Hero section */
@@ -120,6 +131,7 @@ nav ul li a {
 
     &:hover {
         transform: translateY(-5px);
+        box-shadow: 0 4px 10px var(--color-shadow);
     }
 }
 
@@ -189,13 +201,97 @@ footer {
     margin-top: 40px;
 }
 
+
+/* Button styles */
+.button {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #005bb5;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hamburger menu styles */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
 /* Responsive design */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
     }
     aside {
         margin-top: 20px;
         width: 100%;
+    }
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--background-header);
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        left: 0;
+        margin: 0;
+        padding: 20px 0;
+        box-shadow: 0 4px 6px var(--color-shadow);
+        transform: translateY(-100%);
+        transition: transform 0.3s ease-in-out;
+        opacity: 0;
+    }
+    nav.active ul {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    nav ul li {
+        display: block;
+        margin: 15px 0;
+        text-align: center;
+    }
+    .hamburger {
+        display: block;
+        position: absolute;
+    }
+    .hamburger div {
+        width: 25px;
+        height: 3px;
+        background-color: #ffffff;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+    .hamburger.active div:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .hamburger.active div:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger.active div:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px);
+    }
+    /* Ensure nav stays relative */
+    nav {
+        position: relative;
     }
 }
