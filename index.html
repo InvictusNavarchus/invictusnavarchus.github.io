@@ -32,7 +32,7 @@
                 <li><a href="https://blog.navarchus.id" target="_blank">Blog</a></li>
             </ul>
         </nav>
-        <div class="hamburger">
+        <div class="hamburger" aria-label="Toggle navigation menu">
             <div></div>
             <div></div>
             <div></div>
@@ -74,21 +74,21 @@
                 </div>
                 <div class="card">
                     <span>
-                        <img src="icons/python.svg" alt="">
+                        <img src="icons/python.svg" alt="Python Icon">
                         <h3>Python</h3>
                     </span>
-                    <p>Familiar with scrapping tools to collect data from various sources</p>
+                    <p>Familiar with scraping tools to collect data from various sources</p>
                 </div>
                 <div class="card">
                     <span>
-                        <img src="icons/R.svg" alt="">
+                        <img src="icons/R.svg" alt="R Icon">
                         <h3>R</h3>
                     </span>
                     <p>Familiar with R and tidyverse to thoroughly clean, analyze, and visualize data</p>
                 </div>
                 <div class="card">
                     <span>
-                        <img src="icons/tableau.svg" alt="">
+                        <img src="icons/tableau.svg" alt="Tableau Icon">
                         <h3>Tableau</h3>
                     </span>
                     <p>Familiar with Tableau to create interactive and insightful dashboards</p>
@@ -150,7 +150,7 @@
                 <div class="card">
                     <a href="mailto:contact@navarchus.id">
                         <div class="card-image">
-                            <img src="icons/emai.svg" alt="Email Icon">
+                            <img src="icons/email.svg" alt="Email Icon">
                         </div>
                         <div class="card-content">
                             <h3>Email</h3>
@@ -196,32 +196,7 @@ https://navarchus.id -->
     referrerPolicy="no-referrer-when-downgrade"></a></div>
     </noscript>
     <!-- Add JavaScript before the closing body tag -->
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const nav = document.querySelector('nav');
-
-        // Toggle menu when hamburger is clicked
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            nav.classList.toggle('active');
-        });
-
-        // Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-                hamburger.classList.remove('active');
-                nav.classList.remove('active');
-            }
-        });
-
-        // Close menu when clicking on a link
-        nav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                hamburger.classList.remove('active');
-                nav.classList.remove('active');
-            });
-        });
-    </script>
+    <script src="scripts.js"></script>
 <!-- End of Statcounter Code -->
 </body>
 </html>
