@@ -195,6 +195,7 @@ section {
 
 /* Footer */
 footer {
+    color: white;
     text-align: center;
     padding: 20px 0;
     background-color: var(--background-header);
